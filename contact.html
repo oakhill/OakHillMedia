@@ -1,20 +1,4 @@
-<?php
-
-if($_POST["submit"]) {
-    $recipient="info@oakhill.media";
-    $subject="Form to email message";
-    $sender=$_POST["sender"];
-    $senderEmail=$_POST["senderEmail"];
-    $message=$_POST["message"];
-
-    $mailBody="Name: $sender\nEmail: $senderEmail\n\n$message";
-
-    mail($recipient, $subject, $mailBody, "From: $sender <$senderEmail>");
-
-    $thankYou="<p>Thank you! Your message has been sent.</p>";
-}
-
-?><!DOCTYPE HTML>
+<!DOCTYPE HTML>
 <!--
 	Spatial by TEMPLATED
 	templated.co @templatedco
@@ -35,19 +19,20 @@ if($_POST["submit"]) {
 			<link rel="stylesheet" href="css/skel.css" />
 			<link rel="stylesheet" href="css/style.css" />
 			<link rel="stylesheet" href="css/style-xlarge.css" />
+			<link rel="icon" type="image/png" href="images/logo_nofont.png">
 		</noscript>
+			<link rel='shortcut icon' href='favicon.ico' type='image/x-icon' />
+			<link rel="icon" type="image/png" href="favicon.png" />
 	</head>
 	<body>
 
-		<?=$thankYou ?>
-
 		<!-- Header -->
-			<header id="header" class="skels-layers-fixed">
-				<h1><strong><a href="index.html">Spatial</a></strong> by Templated</h1>
+			<header id="header">
+				<h1><strong><a href="index.html">Oak Hill</a></strong> Media</h1>
 				<nav id="nav">
 					<ul>
 						<li><a href="index.html">Home</a></li>
-						<li><a href="contact.html">Contact</a></li>
+						<li><a href="contact.php">Contact</a></li>
 						<li><a href="about.html">About</a></li>
 					</ul>
 				</nav>
@@ -57,65 +42,43 @@ if($_POST["submit"]) {
 			<section id="main" class="wrapper">
 				<div class="container">
 					<header class="major special">
-						<h2>Contact</h2>
-						<p>Send a message or use the contact info below</p>
+						<?=$display ?>
 					</header>
+
+					<!-- Form -->
+          <section>
+            <h3>New Message</h3>
+            <form method="POST" action="https://formspree.io/matt@oakhill.media">
+              <div class="row uniform 50%">
+                <div class="6u 12u$(xsmall)">
+                  <input type="text" name="name" placeholder="Name" />
+                </div>
+                <div class="6u$ 12u$(xsmall)">
+                  <input type="email" name="_replyto" id="email" value="" placeholder="Email" />
+                </div>
+                <div class="12u$">
+                  <textarea name="message" id="message" placeholder="Enter your message" rows="6"></textarea>
+                  <input type="hidden" name="_subject" value="New Inquery!" />
+                </div>
+                <div class="12u$">
+                  <ul class="actions">
+                    <li><input type="submit" value="Send" /></li>
+                    <!-- <li><input type="reset" value="Reset" /></li> -->
+                  </ul>
+                </div>
+              </div>
+            </form>
+          </section>
 
 					<!-- Text -->
 						<section>
-							<h3>Text</h3>
-							<p>This is <b>bold</b> and this is <strong>strong</strong>. This is <i>italic</i> and this is <em>emphasized</em>.
-							This is <sup>superscript</sup> text and this is <sub>subscript</sub> text.
-							This is <u>underlined</u> and this is code: <code>for (;;) { ... }</code>. Finally, <a href="#">this is a link</a>.</p>
-
-							<hr />
-
-					<!-- Form -->
-						<section>
-							<h3>New Message</h3>
-							<form method="post" action="contact.php">
-								<div class="row uniform 50%">
-									<div class="6u 12u$(xsmall)">
-										<input type="text" name="sender" placeholder="Name" />
-									</div>
-									<div class="6u$ 12u$(xsmall)">
-										<input type="email" name="senderEmail" id="email" value="" placeholder="Email" />
-									</div>
-									<div class="12u$">
-										<textarea name="message" id="message" placeholder="Enter your message" rows="6"></textarea>
-									</div>
-									<div class="12u$">
-										<ul class="actions">
-											<li><input type="submit" name="submit" /></li>
-											<li><input type="reset" value="Reset" /></li>
-										</ul>
-									</div>
-								</div>
-							</form>
-						</section>
-
-					<!-- Image -->
-						<section>
-							<h3>Image</h3>
-							<h4>Fit</h4>
-							<div class="box alt">
-								<div class="row 50% uniform">
-									<div class="12u$"><span class="image fit"><img src="images/pic01.jpg" alt="" /></span></div>
-									<div class="4u"><span class="image fit"><img src="images/pic02.jpg" alt="" /></span></div>
-									<div class="4u"><span class="image fit"><img src="images/pic03.jpg" alt="" /></span></div>
-									<div class="4u$"><span class="image fit"><img src="images/pic02.jpg" alt="" /></span></div>
-									<div class="4u"><span class="image fit"><img src="images/pic03.jpg" alt="" /></span></div>
-									<div class="4u"><span class="image fit"><img src="images/pic02.jpg" alt="" /></span></div>
-									<div class="4u$"><span class="image fit"><img src="images/pic03.jpg" alt="" /></span></div>
-									<div class="4u"><span class="image fit"><img src="images/pic02.jpg" alt="" /></span></div>
-									<div class="4u"><span class="image fit"><img src="images/pic03.jpg" alt="" /></span></div>
-									<div class="4u$"><span class="image fit"><img src="images/pic02.jpg" alt="" /></span></div>
-								</div>
-							</div>
-
-							<h4>Left &amp; Right</h4>
-							<p><span class="image left"><img src="images/pic04.jpg" alt="" /></span>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent.</p>
-							<p><span class="image right"><img src="images/pic05.jpg" alt="" /></span>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent.</p>
+							<h3>More Contact Info:</h3>
+							<h4>Email:</h4>
+							<p>info@oakhill.media</p>
+							<h4>Phone:</h4>
+							<p>704.942.4253</p>
+							<h4>Address:</h4>
+							<p>Morrisville, NC <br> 27560 <br> (message for full address)</p>
 						</section>
 
 				</div>
@@ -124,15 +87,14 @@ if($_POST["submit"]) {
 		<!-- Footer -->
 			<footer id="footer">
 				<div class="container">
-					<ul class="icons">
-						<li><a href="#" class="icon fa-facebook"></a></li>
-						<li><a href="#" class="icon fa-twitter"></a></li>
-						<li><a href="#" class="icon fa-instagram"></a></li>
+          <ul class="icons">
+						<li><a target="_blank" href="https://www.facebook.com/oakhillmedia/?fref=ts&ref=br_tf" class="icon fa-facebook"></a></li>
+						<!-- <li><a href="#" class="icon fa-twitter"></a></li> -->
+						<li><a target="_blank" href="https://www.instagram.com/oakhillmedia/" class="icon fa-instagram"></a></li>
 					</ul>
 					<ul class="copyright">
 						<li>&copy; Untitled</li>
 						<li>Design: <a href="http://templated.co">TEMPLATED</a></li>
-						<li>Images: <a href="http://unsplash.com">Unsplash</a></li>
 					</ul>
 				</div>
 			</footer>
