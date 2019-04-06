@@ -1,0 +1,123 @@
+.navbar .navbar-nav {
+    display: inline-block;
+    float: none;
+}
+
+.navbar .navbar-collapse {
+    text-align: center;
+}
+
+.nav-link {
+    color: grey;
+    font-size: 13px;
+    font-family: 'Libre Baskerville';
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: 0.2em;
+    line-height: 40px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.nav-link-img {
+    text-decoration: none !important;
+}
+
+.nav-logo-row {
+    display: block !important;
+    font: normal normal normal 32px/1.4em 'playfair display', serif;
+    letter-spacing: 0.1em;
+    font-weight: lighter !important;
+    text-transform: uppercase;
+    padding-top: 10px;
+}
+
+.oh-header-links li {
+    display: inline-block !important;
+    padding-left: .25em;
+    padding-right: .25em;
+    display: flex;
+    text-decoration: none;
+}
+
+.video-container {
+    position: relative;
+    padding-bottom: 33.5%;
+    padding-top: 30px;
+    height: 0;
+    overflow: hidden;
+}
+
+.video-container iframe, .video-container object, .video-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.ohabout h2 {
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    font-family: 'Old Standard TT';
+    text-align: center;
+}
+
+.ohdetails-footer-text {
+    font-size: .9rem;
+}
+
+h4 {
+    font: normal normal normal 28px/1.4em didot-w01-italic, serif;
+    color: black;
+    text-align: center;
+    padding: .5em;
+    font-style: italic;
+}
+
+p {
+    color: grey;
+    font-weight: 100;
+    /* font: normal normal normal 16px/1.4em brandon-grot-w01-light,helvetica; */
+    text-align: center;
+}
+
+/* body {
+    overflow: hidden;
+} */
+
+.wrapper {
+    /* height: 100%;
+    width: 100%; */
+    overflow: hidden;
+}
+
+.inner-wrapper {
+    /* width: 100%; */
+    /* height: inherit; */
+    /* overflow: auto;
+    padding-right: 15px; */
+    overflow: auto;
+
+    /* Make sure the inner div is not larger than the container
+     * so that we have room to scroll.
+     */
+    max-height: 100%;
+
+    /* Pick an arbitrary margin/padding that should be bigger
+     * than the max width of all the scroll bars across
+     * the devices you are targeting.
+     * padding = -margin
+     */
+    margin-right: -100px;
+    padding-right: 100px;
+}
+
+/* html, body {
+    height: 99%;
+    overflow: hidden;
+} */
+
+.ohcenter {
+    text-align: center;
+}
