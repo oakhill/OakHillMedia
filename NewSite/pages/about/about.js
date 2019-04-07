@@ -3,7 +3,7 @@
     angular.module('app')
 
         .component('ohabout', {
-            templateUrl: "./about/about.html",
+            templateUrl: "pages/about/about.html",
             controller: AboutController
         })
 

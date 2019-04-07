@@ -20,12 +20,12 @@
     <script src="https://unpkg.com/@angular/router@0.2.0/angular1/angular_1_router.js"></script>
 
     <script src="app.js"></script>
-    <script src="about/about.js"></script>
-    <script src="details/details.js"></script>
-    <script src="weddings/weddings.js"></script>
-    <script src="commercial/commercial.js"></script>
-    <script src="contact/contact.js"></script>
-    <script src="clients/clients.js"></script>
+    <script src="./pages/about/about.js"></script>
+    <script src="pages/details/details.js"></script>
+    <script src="pages/weddings/weddings.js"></script>
+    <script src="pages/commercial/commercial.js"></script>
+    <script src="pages/contact/contact.js"></script>
+    <script src="pages/clients/clients.js"></script>
 
 
     <script type="text/javascript">
@@ -72,6 +72,8 @@
             <div ng-if="vm.page == 'home'">
                 <div class="video-container"><iframe width="1920" height="900" src="https://www.youtube.com/embed/kHK7424xHR4?rel=0;&autoplay=1&mute=1"
                         frameborder="0" allowfullscreen></iframe></div>
+                <!-- <iframe src="https://player.vimeo.com/video/3873878" width="100%" height="900" webkitallowfullscreen
+                    mozallowfullscreen allowfullscreen></iframe> -->
             </div>
             <div ng-if="vm.page == 'about'">
                 <ohabout></ohabout>

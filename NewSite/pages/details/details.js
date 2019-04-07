@@ -2,8 +2,8 @@
     'use strict';
     angular.module('app')
 
-        .component('ohweddings', {
-            templateUrl: "./weddings/weddings.html"
+        .component('ohdetails', {
+            templateUrl: "pages/details/details.html"
         })
         
 })(window.angular);

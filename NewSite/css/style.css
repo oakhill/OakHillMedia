@@ -48,6 +48,14 @@
     overflow: hidden;
 }
 
+/* .video-container-portfolio {
+    position: relative;
+    padding-bottom: 33.5%;
+    padding-top: 30px;
+    height: 60px;
+    overflow: hidden;
+} */
+
 .video-container iframe, .video-container object, .video-container embed {
     position: absolute;
     top: 0;

@@ -3,7 +3,7 @@
     angular.module('app')
 
         .component('ohcontact', {
-            templateUrl: "./contact/contact.html"
+            templateUrl: "pages/contact/contact.html"
         })
         
 })(window.angular);

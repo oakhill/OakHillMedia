@@ -3,7 +3,7 @@
     angular.module('app')
 
         .component('ohcommercial', {
-            templateUrl: "./commercial/commercial.html"
+            templateUrl: "pages/commercial/commercial.html"
         })
         
 })(window.angular);

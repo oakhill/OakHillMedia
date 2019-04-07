@@ -3,7 +3,7 @@
     angular.module('app')
 
         .component('ohclients', {
-            templateUrl: "./clients/clients.html"
+            templateUrl: "pages/clients/clients.html"
         })
         
 })(window.angular);
