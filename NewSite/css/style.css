@@ -126,6 +126,16 @@ p {
     overflow: hidden;
 } */
 
-.ohcenter {
-    text-align: center;
-}
+.form-control:focus {
+    border:none;
+    /* border-color: inherit; */
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+
+  .clean-input {
+    border:none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    outline: none;
+  }
