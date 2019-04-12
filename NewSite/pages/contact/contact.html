@@ -11,17 +11,35 @@
     </div>
     <div class="row">
         <div class="col-md-3 offset-md-3">
-            <form method="POST" action="https://formspree.io/matt@oakhill.media">
-                <input type="text" class="clean-input" name="name" placeholder="Name" style="border: none;" /><br />
-                <hr>
-                <input type="email" class="clean-input" name="_replyto" id="email" value="" placeholder="Email" /><br />
-                <hr>
-                <textarea name="message" class="clean-input" id="message" placeholder="Enter your message" rows="6"></textarea><br />
-                <hr>
-                <input type="hidden" class="clean-input" name="_subject" value="New Inquery!" />
-                <input type="submit" value="Send" /><br />
-                <!-- <li><input type="reset" value="Reset" /></li> -->
-            </form>
+            <form ng-if="!$ctrl.message || $ctrl.message == ''" ng-submit="$ctrl.submit()">
+                <div class="form-group">
+                    <input ng-model="$ctrl.contactform.name" class="form-control input-lg" placeholder="Full Name" />
+                </div>
+                <div class="form-group">
+                    <input ng-model="$ctrl.contactform.email" class="form-control input-lg" placeholder="Email" />
+                </div>
+                <div class="form-group">
+                    <input ng-model="$ctrl.contactform.date" class="form-control input-lg" placeholder="Wedding Date" />
+                </div>
+                <div class="form-group">
+                    <input ng-model="$ctrl.contactform.venue" class="form-control input-lg" placeholder="Venue" />
+                </div>
+                <div class="form-group">
+                    <input ng-model="$ctrl.contactform.fiance" class="form-control input-lg" placeholder="Fiance's Name (First & Last)" />
+                </div>
+
+                <div class="form-group">
+                    <textarea ng-model="$ctrl.contactform.aboutCouple" class="form-control contact" placeholder="Tell us about you! How you met, the proposal, what you're excited about for the wedding. Anything that can help us get to know you!">
+                </textarea>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Submit" />
+                </div>
+        </div>
+        </form>
+        <div ng-if="$ctrl.message && $ctrl.message != ''">
+            <p>{{$ctrl.message}}</p>
         </div>
     </div>
+</div>
 </div>
