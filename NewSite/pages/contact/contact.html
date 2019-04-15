@@ -1,45 +1,51 @@
 <div ng-cloak="">
     <div class="row">
-        <div class="col-md-4 offset-md-4">
+        <div class="col-md-4 offset-md-2">
             <h4>Contact Us</h4>
             <p>
-                We would be honored to capture your wedding day! Please send us some information about you so that we
-                can get to know you a little bit and we'll send our current pricing and packages guide as soon as we
-                can.
+                We would be honored to capture your wedding day! Please complete the contact form on the left so we can
+                get to know you better.
             </p>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-md-3 offset-md-3">
-            <form ng-if="!$ctrl.message || $ctrl.message == ''" ng-submit="$ctrl.submit()">
+            <form ng-submit="$ctrl.submit()">
                 <div class="form-group">
                     <input ng-model="$ctrl.contactform.name" class="form-control input-lg" placeholder="Full Name" />
+                    <hr />
                 </div>
                 <div class="form-group">
                     <input ng-model="$ctrl.contactform.email" class="form-control input-lg" placeholder="Email" />
+                    <hr />
                 </div>
                 <div class="form-group">
                     <input ng-model="$ctrl.contactform.date" class="form-control input-lg" placeholder="Wedding Date" />
+                    <hr />
                 </div>
                 <div class="form-group">
                     <input ng-model="$ctrl.contactform.venue" class="form-control input-lg" placeholder="Venue" />
+                    <hr />
                 </div>
                 <div class="form-group">
                     <input ng-model="$ctrl.contactform.fiance" class="form-control input-lg" placeholder="Fiance's Name (First & Last)" />
+                    <hr />
                 </div>
 
                 <div class="form-group">
-                    <textarea ng-model="$ctrl.contactform.aboutCouple" class="form-control contact" placeholder="Tell us about you! How you met, the proposal, what you're excited about for the wedding. Anything that can help us get to know you!">
-                </textarea>
+                    <textarea ng-model="$ctrl.contactform.aboutCouple" class="form-control contact" placeholder="Tell us about you! How you met, the proposal, what you're excited about for the wedding. Anything that can help us get to know you!"></textarea>
+                    <hr />
                 </div>
                 <div class="form-group">
-                    <input type="submit" value="Submit" />
+                    <input type="button" value="Submit Form" ng-click="$ctrl.submit()"/>
                 </div>
+                <br />
+            </form>
+            <div ng-if="$ctrl.showMesasge">
+                <p>{{$ctrl.message}}</p>
+            </div>
         </div>
-        </form>
-        <div ng-if="$ctrl.message && $ctrl.message != ''">
-            <p>{{$ctrl.message}}</p>
+        <div class="col-md-4">
+            <br />
+            <img width="80%" class="ohcenter ohborder-img" src="./images/MattJacCamera.jpg">
         </div>
     </div>
-</div>
+    <br />
+    <br />
 </div>

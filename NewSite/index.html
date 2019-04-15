@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
         crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://use.typekit.net/mmr2oqf.css">
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>
@@ -38,11 +39,11 @@
 <body ng-app="app" ng-controller="IndexController as vm" ng-cloak="">
     <div class="wrapper">
         <div class="inner-wrapper">
-            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <nav class="navbar navbar-expand-lg navbar-light">
                 <div class="collapse navbar-collapse" id="navbarText">
                     <div class="container-fluid">
                         <div class="row nav-logo-row">
-                            <img src="images/OakHill_logo_black_nofont.png" width="150" height="150">
+                            <img src="images/OakHill_logo_black-green_nofont.png" width="150" height="150">
                             <h2>Oak Hill Media</h2>
                         </div>
                         <ul class="navbar-nav oh-header-links a text-nowrap">
@@ -71,11 +72,10 @@
                     </div>
                 </div>
             </nav>
+            <hr ng-if="vm.page != 'home'" class="nav-hr" />
             <div ng-if="vm.page == 'home'">
                 <div class="video-container"><iframe width="1920" height="900" src="https://www.youtube.com/embed/kHK7424xHR4?rel=0;&autoplay=1&mute=1"
                         frameborder="0" allowfullscreen></iframe></div>
-                <!-- <iframe src="https://player.vimeo.com/video/3873878" width="100%" height="900" webkitallowfullscreen
-                    mozallowfullscreen allowfullscreen></iframe> -->
             </div>
             <div ng-if="vm.page == 'about'">
                 <ohabout></ohabout>

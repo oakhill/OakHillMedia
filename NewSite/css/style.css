@@ -26,10 +26,38 @@
 .nav-logo-row {
     display: block !important;
     font: normal normal normal 32px/1.4em 'playfair display', serif;
+    /* font-family: rollerscript-smooth, sans-serif;
+    font-weight: 400;
+    font-style: normal; */
     letter-spacing: 0.1em;
     font-weight: lighter !important;
     text-transform: uppercase;
     padding-top: 10px;
+}
+
+hr {
+    border-top: 1px solid #99bea7;
+}
+
+a {
+    color: #acdda7;
+}
+
+a:hover {
+    text-decoration: none;
+    color: #6dd762;
+}
+
+.form-control::placeholder {
+    color: #b6b6b6;
+    font-family: "Libre Baskerville";
+    /* text-transform: uppercase; */
+    font-size: .9rem;
+}
+
+img {
+    display: block;
+    margin: auto;
 }
 
 .oh-header-links li {
@@ -47,14 +75,6 @@
     height: 0;
     overflow: hidden;
 }
-
-/* .video-container-portfolio {
-    position: relative;
-    padding-bottom: 33.5%;
-    padding-top: 30px;
-    height: 60px;
-    overflow: hidden;
-} */
 
 .video-container iframe, .video-container object, .video-container embed {
     position: absolute;
@@ -76,27 +96,26 @@
 }
 
 h4 {
-    font: normal normal normal 28px/1.4em didot-w01-italic, serif;
-    color: black;
+    /* font: normal normal normal 28px/1.4em didot-w01-italic, serif; */
+    font-family: grafolita-script, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 2rem;
+    color: #99bea7;
     text-align: center;
-    padding: .5em;
-    font-style: italic;
+    /* padding: .5em; */
+    /* font-style: italic; */
 }
 
 p {
     color: grey;
     font-weight: 100;
-    /* font: normal normal normal 16px/1.4em brandon-grot-w01-light,helvetica; */
+    font-family: "Libre Baskerville";
     text-align: center;
+    letter-spacing: .1em;
 }
 
-/* body {
-    overflow: hidden;
-} */
-
 .wrapper {
-    /* height: 100%;
-    width: 100%; */
     overflow: hidden;
 }
 
@@ -106,12 +125,10 @@ p {
     /* overflow: auto;
     padding-right: 15px; */
     overflow: auto;
-
     /* Make sure the inner div is not larger than the container
      * so that we have room to scroll.
      */
     max-height: 100%;
-
     /* Pick an arbitrary margin/padding that should be bigger
      * than the max width of all the scroll bars across
      * the devices you are targeting.
@@ -121,21 +138,63 @@ p {
     padding-right: 100px;
 }
 
-/* html, body {
-    height: 99%;
-    overflow: hidden;
-} */
-
 .form-control:focus {
-    border:none;
-    /* border-color: inherit; */
+    border: none;
     -webkit-box-shadow: none;
     box-shadow: none;
-  }
+}
 
-  .clean-input {
-    border:none;
+.form-control {
+    border: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    padding: 0;
+}
+
+.clean-input {
+    border: none;
     -webkit-box-shadow: none;
     box-shadow: none;
     outline: none;
-  }
+}
+
+textarea.form-control {
+    height: 90px;
+}
+
+button {
+    background-color: transparent;
+}
+
+.ohcenter {
+    text-align: center;
+}
+
+.ohleft {
+    text-align: left;
+    display: initial;
+}
+
+.ohright {
+    text-align: right;
+    display: initial;
+}
+
+.ohborder {
+    border-color: #99bea7;
+    border-width: 1px;
+    background-color: rgba(255, 255, 255, 1);
+    border-style: solid;
+    border-radius: inherit;
+    padding-top: .8em;
+    padding-bottom: .5em;
+}
+
+.ohborder-img {
+    border-color: #99bea7;
+    border-width: 1px;
+    background-color: rgba(255, 255, 255, 1);
+    border-style: solid;
+    border-radius: inherit;
+    padding: 1em;
+}
