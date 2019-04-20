@@ -11,21 +11,26 @@
 
     function contactController($http) {
         var contactCtrl = this;
-        contactCtrl.message = "";
-        contactCtrl.contactform = {};
-        contactCtrl.showMessage = false;
+
         var oakhillEmail = "matt@oakhill.media";
         var email_subject = "New Inquiry!";
         var success_message = "Your message was sent! We'll send over our packages and options soon!";
         var error_message = "Oops. There was an error when trying to send your message. \n " +
             "Please email us directly at matt@oakhill.media and we'll get back to you as soon as we can. Sorry for the inconvenience!";
 
-        contactCtrl.contactform.body = "Date: " + contactCtrl.contactform.date + "\n" +
-            "Venue: " + contactCtrl.contactform.venue + "\n" +
-            "Fiance: " + contactCtrl.contactform.fiance + "\n" +
-            "About the couple: " + contactCtrl.contactform.aboutCouple
+        function init() {
+            contactCtrl.message = "test message ";
+            contactCtrl.contactform = {};
+            contactCtrl.showMessage = true;
+            contactCtrl.contactform.body = "Date: " + contactCtrl.contactform.date + "\n" +
+                "Venue: " + contactCtrl.contactform.venue + "\n" +
+                "Fiance: " + contactCtrl.contactform.fiance + "\n" +
+                "About the couple: " + contactCtrl.contactform.aboutCouple
 
-        contactCtrl.submit = submit;
+            contactCtrl.submit = submit;
+        }
+
+        init();
 
         function submit() {
             $http({
@@ -49,15 +54,14 @@
                     return str.join("&");
                 }
             }).then(function (response) {
-                this.message = success_message;
-                this.showMessage = true;
+                contactCtrl.message = success_message;
+                contactCtrl.messageType = "success";
 
             }).catch(function (error) {
-                this.message = error_message;
+                contactCtrl.message = error_message;
                 console.log("error sending... \n" + "error message: " + error.data.error + "\n" + "error status: " + error.status);
-                this.showMessage = true;
+                contactCtrl.messageType = "error";
             });
-            this.showMessage = true;
         }
     }
 

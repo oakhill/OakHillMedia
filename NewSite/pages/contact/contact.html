@@ -3,7 +3,7 @@
         <div class="col-md-4 offset-md-2">
             <h4>Contact Us</h4>
             <p>
-                We would be honored to capture your wedding day! Please complete the contact form on the left so we can
+                We would be honored to capture your wedding day! Please complete the contact form below so we can
                 get to know you better.
             </p>
             <form ng-submit="$ctrl.submit()">
@@ -24,26 +24,39 @@
                     <hr />
                 </div>
                 <div class="form-group">
-                    <input ng-model="$ctrl.contactform.fiance" class="form-control input-lg" placeholder="Fiance's Name (First & Last)" />
+                    <input ng-model="$ctrl.contactform.fiance" class="form-control input-lg"
+                        placeholder="Fiance's Name (First & Last)" />
                     <hr />
                 </div>
 
                 <div class="form-group">
-                    <textarea ng-model="$ctrl.contactform.aboutCouple" class="form-control contact" placeholder="Tell us about you! How you met, the proposal, what you're excited about for the wedding. Anything that can help us get to know you!"></textarea>
+                    <textarea ng-model="$ctrl.contactform.aboutCouple" class="form-control contact"
+                        placeholder="Tell us about you! How you met, the proposal, what you're excited about for the wedding. Anything that can help us get to know you!"></textarea>
                     <hr />
                 </div>
-                <div class="form-group">
-                    <input type="button" value="Submit Form" ng-click="$ctrl.submit()"/>
+                <div class="form-group bottom-left-border">
+                    <a class="oh-submit" href="" ng-click="$ctrl.submit();">
+                        <h5>SUBMIT FORM</h5>
+                    </a>
+                    <!-- <input type="button" value="Submit Form" ng-click="$ctrl.submit(); $ctrl.showMesasge = true" /> -->
                 </div>
                 <br />
             </form>
-            <div ng-if="$ctrl.showMesasge">
-                <p>{{$ctrl.message}}</p>
-            </div>
+
         </div>
         <div class="col-md-4">
             <br />
             <img width="80%" class="ohcenter ohborder-img" src="./images/MattJacCamera.jpg">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4 offset-md-2" ng-if="$ctrl.showMesasge">
+            <div class="alert alert-success" ng-show="$ctrl.messageType == 'success'">
+                {{$ctrl.message}}
+            </div>
+            <div class="alert alert-warning" ng-show="$ctrl.messageType == 'error'">
+                {{$ctrl.message}}
+            </div>
         </div>
     </div>
     <br />

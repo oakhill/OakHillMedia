@@ -26,9 +26,6 @@
 .nav-logo-row {
     display: block !important;
     font: normal normal normal 32px/1.4em 'playfair display', serif;
-    /* font-family: rollerscript-smooth, sans-serif;
-    font-weight: 400;
-    font-style: normal; */
     letter-spacing: 0.1em;
     font-weight: lighter !important;
     text-transform: uppercase;
@@ -37,6 +34,8 @@
 
 hr {
     border-top: 1px solid #99bea7;
+    margin-top: 0;
+    margin-bottom: 1em;
 }
 
 a {
@@ -51,7 +50,6 @@ a:hover {
 .form-control::placeholder {
     color: #b6b6b6;
     font-family: "Libre Baskerville";
-    /* text-transform: uppercase; */
     font-size: .9rem;
 }
 
@@ -96,15 +94,34 @@ img {
 }
 
 h4 {
-    /* font: normal normal normal 28px/1.4em didot-w01-italic, serif; */
     font-family: grafolita-script, sans-serif;
     font-weight: 400;
     font-style: normal;
     font-size: 2rem;
     color: #99bea7;
     text-align: center;
-    /* padding: .5em; */
-    /* font-style: italic; */
+}
+
+.oh-submit {
+    color: grey;
+    font-size: 13px;
+    font-family: 'Libre Baskerville';
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: 0.2em;
+    line-height: 40px;
+    text-decoration: none;
+    cursor: pointer;
+    text-align: right;
+}
+
+.oh-submit:hover {
+    color: #b6b6b6;
+}
+
+.bottom-left-border {
+    /* border-left: 1px solid #99bea7; */
+    border-bottom: 1px solid #99bea7;
 }
 
 p {
@@ -120,20 +137,8 @@ p {
 }
 
 .inner-wrapper {
-    /* width: 100%; */
-    /* height: inherit; */
-    /* overflow: auto;
-    padding-right: 15px; */
     overflow: auto;
-    /* Make sure the inner div is not larger than the container
-     * so that we have room to scroll.
-     */
     max-height: 100%;
-    /* Pick an arbitrary margin/padding that should be bigger
-     * than the max width of all the scroll bars across
-     * the devices you are targeting.
-     * padding = -margin
-     */
     margin-right: -100px;
     padding-right: 100px;
 }
