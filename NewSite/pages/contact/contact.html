@@ -24,25 +24,40 @@
                     <hr />
                 </div>
                 <div class="form-group">
-                    <input ng-model="$ctrl.contactform.fiance" class="form-control input-lg"
-                        placeholder="Fiance's Name (First & Last)" />
+                    <input ng-model="$ctrl.contactform.fiance" class="form-control input-lg" placeholder="Fiance's Name (First & Last)" />
                     <hr />
                 </div>
 
                 <div class="form-group">
-                    <textarea ng-model="$ctrl.contactform.aboutCouple" class="form-control contact"
-                        placeholder="Tell us about you! How you met, the proposal, what you're excited about for the wedding. Anything that can help us get to know you!"></textarea>
+                    <textarea ng-model="$ctrl.contactform.aboutCouple" class="form-control contact" placeholder="Tell us about you! How you met, the proposal, what you're excited about for the wedding. Anything that can help us get to know you!"></textarea>
                     <hr />
                 </div>
                 <div class="form-group bottom-left-border">
                     <a class="oh-submit" href="" ng-click="$ctrl.submit();">
                         <h5>SUBMIT FORM</h5>
                     </a>
-                    <!-- <input type="button" value="Submit Form" ng-click="$ctrl.submit(); $ctrl.showMesasge = true" /> -->
                 </div>
                 <br />
             </form>
-
+            <!-- <form method="POST" action="https://formspree.io/matt@oakhill.media">
+                <div class="row uniform 50%">
+                    <div class="6u 12u$(xsmall)">
+                        <input type="text" name="name" placeholder="Name" />
+                    </div>
+                    <div class="6u$ 12u$(xsmall)">
+                        <input type="email" name="_replyto" id="email" value="" placeholder="Email" />
+                    </div>
+                    <div class="12u$">
+                        <textarea name="message" id="message" placeholder="Enter your message" rows="6"></textarea>
+                        <input type="hidden" name="_subject" value="New Inquery!" />
+                    </div>
+                    <div class="12u$">
+                        <ul class="actions">
+                            <li><input type="submit" value="Send" /></li>
+                        </ul>
+                    </div>
+                </div>
+            </form> -->
         </div>
         <div class="col-md-4">
             <br />
@@ -60,5 +75,12 @@
         </div>
     </div>
     <br />
-    <br />
+    <div class="row">
+        <div class="col-md-4 offset-md-4">
+            <p class="ohdetails-footer-text">
+                <i>Commercial Films are uniquely tailored to your company. Contact us directly at info@oakhill.media
+                    for your company's distinct needs.</i>
+            </p>
+        </div>
+    </div>
 </div>
