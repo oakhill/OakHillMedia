@@ -45,14 +45,20 @@
 <body ng-app="app" ng-controller="IndexController as vm" ng-cloak="">
     <div class="wrapper">
         <div class="inner-wrapper">
+
             <nav class="navbar navbar-expand-lg navbar-light">
-                <div class="collapse navbar-collapse" id="navbarText">
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <div class="container-fluid">
-                        <div class="row nav-logo-row">
+                        <div id="logo" class="row nav-logo-row">
                             <img src="images/OakHill_logo_black-green_nofont.png" width="150" height="150">
                             <h2>Oak Hill Media</h2>
                         </div>
-                        <ul class="navbar-nav oh-header-links a text-nowrap">
+                        <ul class="navbar-nav mr-auto oh-header-links a">
                             <li class="nav-item">
                                 <a class="nav-link" ng-click="vm.page='home'">HOME</a>
                             </li>
@@ -106,10 +112,14 @@
         </div>
     </div>
     <footer class="footer">
-        <a class="btn-floating btn-lg btn-fb fa" href="https://www.facebook.com/oakhillmedia/"><i class="fa fa-facebook"></i></a>
+        <a class="btn-floating btn-lg btn-fb fa" href="https://www.facebook.com/oakhillmedia/"><i
+                class="fa fa-facebook"></i></a>
         <a class="btn-floating btn-lg btn-email fa" ng-click="vm.page='contact'"><i class="fa fa-envelope"></i></a>
-        <a class="btn-floating btn-lg btn-git fa" href="https://www.instagram.com/oakhillmedia/"><i class="fa fa-instagram"></i></a>
-        <a class="btn-floating btn-lg btn-tw fa" href="https://www.youtube.com/playlist?list=PLMkAhykp_Y_2d7ubhSMsMi3TR6OMH6dYM"><i class="fa fa-youtube-play"></i></a>
+        <a class="btn-floating btn-lg btn-git fa" href="https://www.instagram.com/oakhillmedia/"><i
+                class="fa fa-instagram"></i></a>
+        <a class="btn-floating btn-lg btn-tw fa"
+            href="https://www.youtube.com/playlist?list=PLMkAhykp_Y_2d7ubhSMsMi3TR6OMH6dYM"><i
+                class="fa fa-youtube-play"></i></a>
     </footer>
 </body>
 
