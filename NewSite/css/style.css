@@ -104,15 +104,17 @@ h4 {
 
 .oh-submit {
     color: grey;
-    font-size: 13px;
+    /* font-size: 13px; */
     font-family: 'Libre Baskerville';
     font-weight: 400;
     font-style: normal;
     letter-spacing: 0.2em;
-    line-height: 40px;
+    /* line-height: 40px; */
+    line-height: 30px;
     text-decoration: none;
     cursor: pointer;
     text-align: right;
+    /* padding-bottom: 1em; */
 }
 
 .oh-submit:hover {
