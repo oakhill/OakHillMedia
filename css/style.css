@@ -218,3 +218,7 @@ button {
 .fa {
     color: black;
 }
+
+ .display-reset {
+    display: inherit !important;
+ }

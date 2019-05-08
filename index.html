@@ -43,74 +43,78 @@
 </head>
 
 <body ng-app="app" ng-controller="IndexController as vm" ng-cloak="">
-    <div class="wrapper">
-        <div class="inner-wrapper">
-
-            <nav class="navbar navbar-expand-lg navbar-light">
-                <button class="navbar-toggler" type="button" data-toggle="collapse"
-                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                    aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <div class="container-fluid">
-                        <div id="logo" class="row nav-logo-row">
-                            <img src="images/OakHill_logo_black-green_nofont.png" width="150" height="150">
-                            <h2>Oak Hill Media</h2>
-                        </div>
-                        <ul class="navbar-nav mr-auto oh-header-links a">
-                            <li class="nav-item">
-                                <a class="nav-link" ng-click="vm.page='home'">HOME</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" ng-click="vm.page='about'">WHO WE ARE</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" ng-click="vm.page='weddings'">WEDDINGS</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" ng-click="vm.page='commercial'">COMMERCIAL</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" ng-click="vm.page='details'">DETAILS</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" ng-click="vm.page='contact'">CONTACT US</a>
-                            </li>
-                            <!-- <li class="nav-item">
-                                <a class="nav-link" ng-click="vm.page='clients'">CLIENTS</a>
-                            </li> -->
-                        </ul>
+    <!-- <div class="wrapper"> -->
+    <!-- <div class="inner-wrapper"> -->
+    <div class="row">
+        <div class="col-md-12">
+            <nav class="navbar-expand-lg navbar-light">
+                <!-- <button class="navbar-toggler" type="button" data-toggle="collapse"
+                                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                                    aria-label="Toggle navigation">
+                                    <span class="navbar-toggler-icon"></span>
+                                </button> -->
+                <div class="ohcenter" id="navbarSupportedContent">
+                    <!-- <div class="container-fluid"> -->
+                    <div id="logo" class="row nav-logo-row">
+                        <img src="images/OakHill_logo_black-green_nofont.png" width="150" height="150">
+                        <h2>Oak Hill Media</h2>
                     </div>
+                    <ul class="navbar-nav mr-auto oh-header-links a display-reset">
+                        <li class="nav-item">
+                            <a class="nav-link" ng-click="vm.page='home'">HOME</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" ng-click="vm.page='about'">WHO WE ARE</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" ng-click="vm.page='weddings'">WEDDINGS</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" ng-click="vm.page='commercial'">COMMERCIAL</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" ng-click="vm.page='details'">DETAILS</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" ng-click="vm.page='contact'">CONTACT US</a>
+                        </li>
+                        <!-- <li class="nav-item">
+                                                <a class="nav-link" ng-click="vm.page='clients'">CLIENTS</a>
+                                            </li> -->
+                    </ul>
+                    <!-- </div> -->
                 </div>
             </nav>
-            <hr ng-if="vm.page != 'home'" class="nav-hr" />
-            <br />
-            <div ng-if="vm.page == 'home'">
-                <div class="video-container"><iframe width="1920" height="900"
-                        src="https://www.youtube.com/embed/kHK7424xHR4?rel=0;&autoplay=1&mute=1" frameborder="0"
-                        allowfullscreen></iframe></div>
-            </div>
-            <div ng-if="vm.page == 'about'">
-                <ohabout></ohabout>
-            </div>
-            <div ng-if="vm.page == 'weddings'">
-                <ohweddings></ohweddings>
-            </div>
-            <div ng-if="vm.page == 'commercial'">
-                <ohcommercial></ohcommercial>
-            </div>
-            <div ng-if="vm.page == 'details'">
-                <ohdetails></ohdetails>
-            </div>
-            <div ng-if="vm.page == 'contact'">
-                <ohcontact></ohcontact>
-            </div>
-            <div ng-if="vm.page == 'clients'">
-                <ohclients></ohclients>
-            </div>
         </div>
     </div>
+
+    <hr ng-if="vm.page != 'home'" class="nav-hr" />
+    <br />
+    <div ng-if="vm.page == 'home'">
+        <div class="video-container"><iframe width="1920" height="900"
+                src="https://www.youtube.com/embed/kHK7424xHR4?rel=0;&autoplay=1&mute=1" frameborder="0"
+                allowfullscreen></iframe></div>
+    </div>
+    <div ng-if="vm.page == 'about'">
+        <ohabout></ohabout>
+    </div>
+    <div ng-if="vm.page == 'weddings'">
+        <ohweddings></ohweddings>
+    </div>
+    <div ng-if="vm.page == 'commercial'">
+        <ohcommercial></ohcommercial>
+    </div>
+    <div ng-if="vm.page == 'details'">
+        <ohdetails></ohdetails>
+    </div>
+    <div ng-if="vm.page == 'contact'">
+        <ohcontact></ohcontact>
+    </div>
+    <div ng-if="vm.page == 'clients'">
+        <ohclients></ohclients>
+    </div>
+    <!-- </div> -->
+    <!-- </div> -->
     <footer class="footer">
         <a class="btn-floating btn-lg btn-fb fa" href="https://www.facebook.com/oakhillmedia/"><i
                 class="fa fa-facebook"></i></a>
