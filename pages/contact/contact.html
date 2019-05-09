@@ -6,7 +6,6 @@
                 We would be honored to capture your wedding day! Please complete the contact form below so we can
                 get to know you better.
             </p>
-            <!-- <form ng-submit="$ctrl.submit()"> -->
             <form method="POST" action="https://formspree.io/matt@oakhill.media">
                 <div class="form-group">
                     <input ng-model="$ctrl.contactform.name" type="text" name="name" class="form-control input-lg"
@@ -44,54 +43,18 @@
                     <textarea class="ng-hide" name="message" id="message" ng-model="$ctrl.contactform.body"></textarea>
                     <input type="hidden" name="_subject"
                         value="New Inquery! {{ $ctrl.contactform.date }} - {{ $ctrl.contactform.name }}" />
-                    <!-- <a class="oh-submit" href="" ng-click="$ctrl.submit();">
-                        <h5>SUBMIT FORM</h5>
-                    </a> -->
-                    <!-- <ul class="actions"> -->
-                    <!-- <li> -->
                     <div class="ohright">
                         <input class="actions oh-submit" type="submit" value="Send" ng-click="$ctrl.submit();" />
                     </div>
-                    <!-- </li> -->
-                    <!-- </ul> -->
                 </div>
                 <br />
             </form>
-            <!-- <form method="POST" action="https://formspree.io/matt@oakhill.media">
-                <div class="row uniform 50%">
-                    <div class="6u 12u$(xsmall)">
-                        <input type="text" name="name" placeholder="Name" />
-                    </div>
-                    <div class="6u$ 12u$(xsmall)">
-                        <input type="email" name="_replyto" id="email" value="" placeholder="Email" />
-                    </div>
-                    <div class="12u$">
-                        <textarea name="message" id="message" placeholder="Enter your message" rows="6"></textarea>
-                        <input type="hidden" name="_subject" value="New Inquery!" />
-                    </div>
-                    <div class="12u$">
-                        <ul class="actions">
-                            <li><input type="submit" value="Send" /></li>
-                        </ul>
-                    </div>
-                </div>
-            </form> -->
         </div>
         <div class="col-md-4">
             <br />
             <img width="80%" class="ohcenter ohborder-img" src="./images/MattJacCamera.jpg">
         </div>
     </div>
-    <!-- <div class="row">
-        <div class="col-md-4 offset-md-2" ng-if="$ctrl.showMesasge">
-            <div class="alert alert-success" ng-show="$ctrl.messageType == 'success'">
-                {{$ctrl.message}}
-            </div>
-            <div class="alert alert-warning" ng-show="$ctrl.messageType == 'error'">
-                {{$ctrl.message}}
-            </div>
-        </div>
-    </div> -->
     <br />
     <div class="row">
         <div class="col-md-4 offset-md-4">

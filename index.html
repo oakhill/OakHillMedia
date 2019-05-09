@@ -26,8 +26,6 @@
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular.min.js"></script>
     <script src="https://unpkg.com/@angular/router@0.2.0/angular1/angular_1_router.js"></script>
 
-    <!-- <script src="other/angular-formspree/angular-formspree.js"></script> -->
-
     <script src="app.js"></script>
     <script src="pages/about/about.js"></script>
     <script src="pages/details/details.js"></script>
@@ -43,18 +41,11 @@
 </head>
 
 <body ng-app="app" ng-controller="IndexController as vm" ng-cloak="">
-    <!-- <div class="wrapper"> -->
-    <!-- <div class="inner-wrapper"> -->
+
     <div class="row">
         <div class="col-md-12">
             <nav class="navbar-expand-lg navbar-light">
-                <!-- <button class="navbar-toggler" type="button" data-toggle="collapse"
-                                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                                    aria-label="Toggle navigation">
-                                    <span class="navbar-toggler-icon"></span>
-                                </button> -->
                 <div class="ohcenter" id="navbarSupportedContent">
-                    <!-- <div class="container-fluid"> -->
                     <div id="logo" class="row nav-logo-row">
                         <img src="images/OakHill_logo_black-green_nofont.png" width="150" height="150">
                         <h2>Oak Hill Media</h2>
@@ -78,11 +69,7 @@
                         <li class="nav-item">
                             <a class="nav-link" ng-click="vm.page='contact'">CONTACT US</a>
                         </li>
-                        <!-- <li class="nav-item">
-                                                <a class="nav-link" ng-click="vm.page='clients'">CLIENTS</a>
-                                            </li> -->
                     </ul>
-                    <!-- </div> -->
                 </div>
             </nav>
         </div>
@@ -113,8 +100,7 @@
     <div ng-if="vm.page == 'clients'">
         <ohclients></ohclients>
     </div>
-    <!-- </div> -->
-    <!-- </div> -->
+
     <footer class="footer">
         <a class="btn-floating btn-lg btn-fb fa" href="https://www.facebook.com/oakhillmedia/"><i
                 class="fa fa-facebook"></i></a>
@@ -125,6 +111,7 @@
             href="https://www.youtube.com/playlist?list=PLMkAhykp_Y_2d7ubhSMsMi3TR6OMH6dYM"><i
                 class="fa fa-youtube-play"></i></a>
     </footer>
+
 </body>
 
 
